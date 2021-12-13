@@ -18,7 +18,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Fetching data
         run: npm start
-      - uses: actions/upload-artifact@v2
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: ips
-          path: ips.csv
+          files: ips.csv
